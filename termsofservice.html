@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Terms of Service for the Abraxas Discord application.">
+  <meta name="theme-color" content="#24123d">
+  <title>Terms of Service | Abraxas</title>
+  <style>
+    :root {
+      --bg: #0f0b16;
+      --panel: #1e142a;
+      --purple: #6f42c1;
+      --purple-bright: #9b6de3;
+      --gold: #d6aa3d;
+      --gold-bright: #f1cf70;
+      --text: #f7f3fb;
+      --muted: #c9bfd4;
+      --border: rgba(241, 207, 112, 0.22);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+      --radius: 18px;
+      --content-width: 940px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(111, 66, 193, 0.22), transparent 34rem),
+        radial-gradient(circle at 88% 8%, rgba(214, 170, 61, 0.10), transparent 28rem),
+        linear-gradient(180deg, #120c1c 0%, var(--bg) 38%, #0b0810 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--gold-bright);
+      text-decoration-thickness: 1px;
+      text-underline-offset: .2em;
+    }
+
+    a:hover, a:focus-visible { color: #ffe4a0; }
+
+    a:focus-visible {
+      outline: 3px solid var(--gold-bright);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .skip-link { position: absolute; left: -9999px; top: auto; }
+    .skip-link:focus {
+      left: 1rem;
+      top: 1rem;
+      z-index: 100;
+      padding: .7rem 1rem;
+      color: #160f20;
+      background: var(--gold-bright);
+      font-weight: 800;
+      border-radius: 999px;
+    }
+
+    .site-header {
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      background: rgba(12,8,18,.72);
+      backdrop-filter: blur(14px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .header-inner {
+      width: min(calc(100% - 2rem), 1120px);
+      min-height: 70px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: .75rem;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 850;
+      letter-spacing: .02em;
+    }
+
+    .brand-logo {
+      width: 34px;
+      height: 34px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .brand-name { font-size: 1.08rem; }
+    .header-label { color: var(--muted); font-size: .92rem; white-space: nowrap; }
+
+    main {
+      width: min(calc(100% - 2rem), var(--content-width));
+      margin: 0 auto;
+      padding: 4.5rem 0 5rem;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(2rem, 5vw, 4rem);
+      margin-bottom: 2rem;
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) + 8px);
+      background:
+        linear-gradient(135deg, rgba(111,66,193,.27), rgba(40,25,57,.92) 48%, rgba(214,170,61,.08)),
+        var(--panel);
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -85px;
+      top: -90px;
+      border: 1px solid rgba(241,207,112,.18);
+      border-radius: 50%;
+      box-shadow: 0 0 0 34px rgba(111,66,193,.05), 0 0 0 68px rgba(214,170,61,.035);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      margin: 0 0 .65rem;
+      color: var(--gold-bright);
+      font-size: .78rem;
+      font-weight: 850;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1, h2 { line-height: 1.2; letter-spacing: -.025em; }
+
+    h1 {
+      margin: 0;
+      max-width: 720px;
+      font-size: clamp(2.4rem, 7vw, 4.7rem);
+      font-weight: 900;
+    }
+
+    .hero-lede {
+      max-width: 760px;
+      margin: 1.25rem 0 0;
+      color: #e0d8e8;
+      font-size: clamp(1rem, 2vw, 1.18rem);
+    }
+
+    .effective-date {
+      display: inline-flex;
+      margin-top: 1.5rem;
+      padding: .45rem .8rem;
+      border: 1px solid rgba(241,207,112,.30);
+      border-radius: 999px;
+      color: var(--gold-bright);
+      background: rgba(11,8,16,.28);
+      font-size: .9rem;
+      font-weight: 750;
+    }
+
+    .notice {
+      margin: 1.5rem 0 2rem;
+      padding: 1.3rem 1.4rem;
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      background: linear-gradient(90deg, rgba(214,170,61,.11), rgba(111,66,193,.06));
+      color: #f7efdc;
+      font-size: 1.02rem;
+    }
+
+    .policy-section {
+      margin: 1.25rem 0;
+      padding: clamp(1.4rem, 3vw, 2rem);
+      border: 1px solid rgba(255,255,255,.075);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.018), rgba(255,255,255,0)), var(--panel);
+      box-shadow: 0 14px 38px rgba(0,0,0,.16);
+    }
+
+    .policy-section h2 {
+      margin: 0 0 1rem;
+      color: #fff;
+      font-size: clamp(1.35rem, 3vw, 1.75rem);
+    }
+
+    .policy-section h2 .number {
+      color: var(--gold-bright);
+      margin-right: .35rem;
+    }
+
+    p { margin: .75rem 0; }
+    ul { padding-left: 1.35rem; }
+    li + li { margin-top: .35rem; }
+    strong { color: #fff; }
+
+    .contact-card {
+      margin-top: 1.25rem;
+      padding: 1.1rem 1.2rem;
+      border: 1px solid rgba(214,170,61,.32);
+      border-radius: 14px;
+      background: rgba(214,170,61,.075);
+    }
+
+    .contact-card p { margin: .3rem 0; }
+
+    footer {
+      width: min(calc(100% - 2rem), var(--content-width));
+      margin: 0 auto;
+      padding: 0 0 3rem;
+      color: #a99db6;
+      font-size: .9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .header-inner { min-height: 62px; }
+      .header-label { display: none; }
+      main { padding-top: 2rem; }
+      .hero { padding: 1.6rem; }
+      .policy-section { padding: 1.25rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    @media print {
+      body { color: #111; background: #fff; }
+      .site-header, .skip-link { display: none; }
+      main { width: 100%; max-width: none; padding: 0; }
+      .hero, .policy-section, .contact-card, .notice {
+        box-shadow: none;
+        color: #111;
+        background: #fff;
+        border-color: #bbb;
+      }
+      .hero::after { display: none; }
+      h1, .policy-section h2, strong { color: #111; }
+      .eyebrow, .effective-date, .policy-section h2 .number, a { color: #4c2676; }
+      footer { color: #555; }
+      a { text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to Terms of Service</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Abraxas home">
+        <img class="brand-logo" src="abraxas-logo.png" alt="">
+        <span class="brand-name">Abraxas</span>
+      </a>
+      <span class="header-label">Terms of Service</span>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">Abraxas</p>
+      <h1 id="page-title">Terms of Service</h1>
+      <p class="hero-lede">
+        These Terms govern your use of the Abraxas Discord application and related services.
+      </p>
+      <div class="effective-date">Effective September 3, 2026</div>
+    </section>
+
+    <div class="notice">
+      By installing, configuring, accessing, or using Abraxas, you agree to these Terms.
+      If you use Abraxas on behalf of a company, organization, Discord server, or other entity,
+      you represent that you have authority to act on its behalf.
+      <br><br>
+      <strong>Abraxas is owned and operated by Joshua Lizana, an individual residing in Louisiana, United States.</strong>
+    </div>
+
+    <section class="policy-section">
+      <h2><span class="number">1.</span> Relationship With Discord</h2>
+      <p>Abraxas is an independent application that integrates with Discord. Abraxas is not affiliated with, endorsed by, sponsored by, or operated by Discord Inc.</p>
+      <p>Your use of Discord remains subject to Discord's own Terms of Service, Community Guidelines, policies, and other applicable rules. These Terms do not replace or modify your agreement with Discord.</p>
+      <p>If these Terms conflict with requirements imposed by Discord that apply to your use of Abraxas, the applicable Discord requirements control to the extent of that conflict.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">2.</span> Eligibility</h2>
+      <p>You may use Abraxas only if you are permitted to use Discord and may legally agree to these Terms.</p>
+      <p>If applicable law requires consent from a parent, guardian, or other authorized person before you can use the Service, you may use Abraxas only with that required consent.</p>
+      <p>You may not use Abraxas if doing so would violate applicable law or Discord's rules.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">3.</span> The Service</h2>
+      <p>Abraxas provides tools for managing Discord servers, including onboarding and Applications, role and access management, administrator-configured automation and responses, and related administrative functionality.</p>
+      <p>Available features may depend on the server, its configuration, Discord permissions, Discord itself, or the current version of Abraxas.</p>
+      <p>Features may be added, modified, replaced, limited, suspended, or discontinued as the Service develops.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">4.</span> Server Owners and Administrators</h2>
+      <p>If you install, configure, or administer Abraxas for a Discord server, you represent that you have permission to do so.</p>
+      <p>Server owners and administrators decide how Abraxas is configured within their server, including what Applications ask, which users or roles may review them, which roles or permissions Abraxas may manage, what automated responses are configured, and which users receive delegated authority.</p>
+      <p>You are responsible for ensuring that your configuration and use of Abraxas complies with applicable law, Discord's rules, and the rights of other people.</p>
+      <p>Abraxas does not independently approve or endorse questions, responses, rules, eligibility criteria, moderation decisions, or other content or choices configured by server administrators.</p>
+      <p>Server administrators control their server configuration and may manage access to and deletion of Discord-hosted messages using the tools Discord provides.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">5.</span> Applications and User Submissions</h2>
+      <p>Server administrators may configure Applications that request information from Discord members. Information submitted through an Application may be delivered to administrators or delegated reviewers within the applicable Discord server.</p>
+      <p>Administrators must not configure Abraxas to solicit, and users must not intentionally submit through Abraxas, information that the Service is not designed to handle, including:</p>
+      <ul>
+        <li>passwords or authentication credentials;</li>
+        <li>financial account credentials;</li>
+        <li>government identification numbers;</li>
+        <li>private cryptographic keys or access tokens;</li>
+        <li>protected health or medical information; or</li>
+        <li>other highly sensitive information where collection through a Discord server-management application would be inappropriate or unlawful.</li>
+      </ul>
+      <p>Once information is delivered into a Discord channel, the resulting message is Discord-hosted server content and may continue to exist independently of Abraxas. Abraxas's own handling of Application data is described in the <a href="privacypolicy.html">Privacy Policy</a>.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">6.</span> Acceptable Use</h2>
+      <p>You may not use Abraxas to violate applicable law, Discord's Terms of Service, Discord's Community Guidelines, or other applicable Discord policies.</p>
+      <p>You also may not use or attempt to use Abraxas to:</p>
+      <ul>
+        <li>harm, threaten, exploit, harass, or unlawfully discriminate against another person;</li>
+        <li>facilitate fraud, phishing, credential theft, malware, or other malicious activity;</li>
+        <li>infringe intellectual-property, privacy, publicity, or other rights;</li>
+        <li>gain unauthorized access to accounts, servers, systems, or information;</li>
+        <li>circumvent Discord permissions, security controls, platform restrictions, or restrictions imposed by Abraxas;</li>
+        <li>interfere with, probe, attack, overload, or intentionally degrade the Service or its infrastructure;</li>
+        <li>use automated systems to create abusive or excessive requests;</li>
+        <li>use Abraxas in violation of sanctions, export restrictions, or other applicable legal requirements; or</li>
+        <li>encourage or assist another person in doing any of the above.</li>
+      </ul>
+      <p>Access may be restricted or terminated when reasonably necessary to prevent abuse, protect users or the Service, comply with Discord requirements, or comply with law.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">7.</span> Your Content and Configurations</h2>
+      <p>You retain whatever ownership rights you have in information, text, configurations, responses, Application questions, and other content you provide through Abraxas.</p>
+      <p>You grant Joshua Lizana a limited, non-exclusive license to process, reproduce, transmit, display, and otherwise use that content only as reasonably necessary to operate Abraxas and perform the actions you request.</p>
+      <p>This license does not transfer ownership of your content.</p>
+      <p>Where content is transmitted to Discord, Discord's own terms may separately govern its storage and use on Discord's platform.</p>
+      <p>You represent that you have the rights and permissions necessary to provide content you configure or submit through Abraxas.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">8.</span> Abraxas Intellectual Property</h2>
+      <p>Except for user-provided content, Discord materials, open-source components, and other third-party materials, Abraxas and its associated software, design, documentation, branding, and logo are owned by <strong>Joshua Lizana</strong> or applicable licensors.</p>
+      <p>These Terms do not grant you ownership of Abraxas.</p>
+      <p>You may use the Service only through its intended interfaces and functionality. Unless permitted by applicable law or a separate license, you may not copy, sell, license, redistribute, or commercially exploit Abraxas software or branding without permission.</p>
+      <p>Open-source software incorporated into Abraxas remains subject to its applicable open-source licenses.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">9.</span> Privacy</h2>
+      <p>The collection, use, storage, sharing, retention, and deletion of information by Abraxas is described in the <a href="privacypolicy.html"><strong>Abraxas Privacy Policy</strong></a>.</p>
+      <p>These Terms govern use of the Service. The Privacy Policy governs Abraxas's handling of personal and other data.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">10.</span> Third-Party Services</h2>
+      <p>Abraxas depends on third-party services, including Discord. Those services operate independently and may change, restrict, suspend, or discontinue functionality that Abraxas relies upon.</p>
+      <p>To the maximum extent permitted by law, Joshua Lizana is not responsible for the availability, operation, security, policies, or conduct of third-party services.</p>
+      <p>Changes or outages affecting Discord or another dependency may cause some or all of Abraxas to stop functioning temporarily or permanently.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">11.</span> Availability and Changes to the Service</h2>
+      <p>Abraxas is provided without a guarantee of uninterrupted or error-free availability.</p>
+      <p>The Service may become unavailable because of maintenance, technical failures, security incidents, Discord outages or API changes, infrastructure failures, or other circumstances.</p>
+      <p>Any part of Abraxas may be modified, suspended, limited, or discontinued. Where practical, notice may be provided for significant planned changes, but advance notice is not guaranteed in every circumstance.</p>
+      <p>No support level, uptime commitment, response time, or service-level agreement is provided unless Joshua Lizana expressly agrees to one in a separate written agreement.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">12.</span> Suspension and Termination</h2>
+      <p>You may stop using Abraxas at any time. A server owner or authorized administrator may remove Abraxas from their Discord server through Discord.</p>
+      <p>Access to Abraxas may be suspended, restricted, blocked, or terminated when reasonably necessary because of:</p>
+      <ul>
+        <li>violation of these Terms;</li>
+        <li>abuse or attempted abuse of the Service;</li>
+        <li>security concerns;</li>
+        <li>legal requirements;</li>
+        <li>Discord requirements or enforcement;</li>
+        <li>threats to the Service or its users; or</li>
+        <li>discontinuation of the Service.</li>
+      </ul>
+      <p>Data associated with removal or termination is handled according to the Privacy Policy and applicable law. Content previously delivered into Discord may continue to exist independently within Discord after Abraxas has deleted its own associated data.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">13.</span> No Emergency or Professional Services</h2>
+      <p>Abraxas is a Discord server-management tool. It is not designed for emergency communications or for decisions that require regulated professional services.</p>
+      <p>Do not rely on Abraxas to request or provide emergency assistance.</p>
+      <p>Application approval, denial, role assignment, access changes, and other actions performed through Abraxas reflect the configuration or decisions of the applicable Discord server and its administrators.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">14.</span> Disclaimer of Warranties</h2>
+      <p>To the maximum extent permitted by law, Abraxas is provided <strong>"as is" and "as available."</strong></p>
+      <p>No warranty is made that the Service will:</p>
+      <ul>
+        <li>always be available, uninterrupted, secure, or error-free;</li>
+        <li>meet every server's requirements;</li>
+        <li>prevent unauthorized activity;</li>
+        <li>prevent loss of Discord permissions, configuration, or content;</li>
+        <li>remain compatible with future Discord changes; or</li>
+        <li>produce any particular result.</li>
+      </ul>
+      <p>Nothing in these Terms excludes warranties or rights that applicable law does not allow to be excluded.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">15.</span> Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, <strong>Joshua Lizana will not be liable for indirect, incidental, special, consequential, exemplary, or punitive damages arising out of or relating to Abraxas.</strong></p>
+      <p>This includes, where legally permitted, loss of data, loss of access, lost profits or revenue, business interruption, interruption or disruption of a Discord server, loss or modification of Discord roles, channels, permissions, or other configuration, and consequences arising from configurations or decisions made by server administrators.</p>
+      <p><strong>To the maximum extent permitted by law, Joshua Lizana's total aggregate liability arising out of or relating to Abraxas will not exceed the amount you paid directly for Abraxas during the twelve months preceding the event giving rise to the claim.</strong></p>
+      <p>These exclusions and limitations do not exclude or limit liability for intentional or gross fault, physical injury, or any other liability that applicable law does not permit to be excluded or limited.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">16.</span> Indemnification by Server Administrators</h2>
+      <p>This section applies only if you own, install, administer, or configure Abraxas for a Discord server.</p>
+      <p>To the extent permitted by law, you agree to defend, indemnify, and hold harmless <strong>Joshua Lizana</strong> from third-party claims, liabilities, damages, judgments, and reasonable costs and attorneys' fees arising from:</p>
+      <ul>
+        <li>content, questions, rules, responses, or configurations you provide through Abraxas;</li>
+        <li>administrative actions or decisions you make using Abraxas;</li>
+        <li>your misuse of Abraxas;</li>
+        <li>your violation of these Terms, applicable law, or Discord's rules; or</li>
+        <li>your infringement or violation of another person's rights.</li>
+      </ul>
+      <p>This section does not require you to indemnify Joshua Lizana to the extent a claim results from conduct for which applicable law makes Joshua Lizana legally responsible.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">17.</span> Changes to These Terms</h2>
+      <p>These Terms may be updated as Abraxas changes.</p>
+      <p>If a change materially affects the rules governing use of the Service, the effective date will be updated and the revised Terms will be made publicly available before or when the change takes effect.</p>
+      <p>Your continued use of Abraxas after revised Terms take effect constitutes acceptance of the revised Terms to the extent permitted by law. If you do not agree to revised Terms, you must stop using Abraxas.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">18.</span> Governing Law and Disputes</h2>
+      <p>These Terms and any dispute arising out of or relating to Abraxas are governed by the laws of the <strong>State of Louisiana, United States</strong>, without regard to its conflict-of-law principles, except to the extent applicable law requires otherwise.</p>
+      <p>To the extent permitted by law, any legal action arising out of or relating to these Terms or Abraxas must be brought in a state or federal court of competent jurisdiction located in Louisiana, and you consent to the personal jurisdiction of those courts.</p>
+      <p>Nothing in these Terms prevents either party from bringing a claim in another jurisdiction where applicable law requires it.</p>
+      <p><strong>These Terms do not require arbitration.</strong></p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">19.</span> General Terms</h2>
+      <p>If any provision of these Terms is found invalid or unenforceable, the remaining provisions remain in effect to the extent permitted by law.</p>
+      <p>Failure to enforce any provision does not waive the right to enforce it later.</p>
+      <p>You may not transfer your rights or obligations under these Terms without permission where such restriction is permitted by law.</p>
+      <p>Joshua Lizana may transfer ownership or operation of Abraxas, and associated rights and obligations under these Terms, in connection with the formation of a business entity, reorganization, acquisition, sale, or transfer of the Service.</p>
+      <p>These Terms, together with the Privacy Policy and any additional terms expressly applicable to a particular Abraxas feature, constitute the agreement governing your use of Abraxas.</p>
+    </section>
+
+    <section class="policy-section">
+      <h2><span class="number">20.</span> Contact</h2>
+      <p>Questions regarding these Terms may be sent to:</p>
+      <div class="contact-card">
+        <p><strong>Abraxas Terms</strong></p>
+        <p><a href="mailto:terms@abraxas.bot">terms@abraxas.bot</a></p>
+      </div>
+      <p>Privacy inquiries and data-rights requests should be sent to:</p>
+      <div class="contact-card">
+        <p><strong>Abraxas Privacy</strong></p>
+        <p><a href="mailto:privacy@abraxas.bot">privacy@abraxas.bot</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Abraxas. Terms of Service. &nbsp;·&nbsp; <a href="privacypolicy.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>
