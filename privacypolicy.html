@@ -24,6 +24,7 @@
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       min-height: 100vh;
@@ -41,7 +42,9 @@
       text-decoration-thickness: 1px;
       text-underline-offset: .2em;
     }
+
     a:hover, a:focus-visible { color: #ffe4a0; }
+
     a:focus-visible {
       outline: 3px solid var(--gold-bright);
       outline-offset: 3px;
@@ -89,16 +92,11 @@
       letter-spacing: .02em;
     }
 
-    .brand-mark {
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      color: #150d20;
-      background: linear-gradient(145deg, var(--gold-bright), var(--gold));
-      box-shadow: 0 0 0 3px rgba(111,66,193,.28), 0 8px 25px rgba(214,170,61,.18);
-      font-weight: 950;
+    .brand-logo {
+      width: 34px;
+      height: 34px;
+      display: block;
+      object-fit: contain;
     }
 
     .brand-name { font-size: 1.08rem; }
@@ -263,8 +261,8 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="/" aria-label="Abraxas home">
-        <span class="brand-mark" aria-hidden="true">A</span>
+      <a class="brand" href="index.html" aria-label="Abraxas home">
+        <img class="brand-logo" src="abraxas-logo.png" alt="">
         <span class="brand-name">Abraxas</span>
       </a>
       <span class="header-label">Privacy Policy</span>
@@ -273,7 +271,7 @@
 
   <main id="main-content">
     <section class="hero" aria-labelledby="page-title">
-      <p class="eyebrow">Abraxas Legal</p>
+      <p class="eyebrow">Abraxas</p>
       <h1 id="page-title">Privacy Policy</h1>
       <p class="hero-lede">
         This Privacy Policy explains how Abraxas collects, uses, stores, shares,
@@ -289,10 +287,7 @@
 
     <section class="policy-section">
       <h2><span class="number">1.</span> Information Abraxas Processes</h2>
-      <p>
-        The information Abraxas processes depends on which features a Discord server
-        enables and how you interact with those features.
-      </p>
+      <p>The information Abraxas processes depends on which features a Discord server enables and how you interact with those features.</p>
 
       <h3>Discord Account and Server Information</h3>
       <p>Abraxas may receive or use information from Discord such as:</p>
@@ -304,11 +299,7 @@
         <li>Discord permissions and other information needed to determine what actions Abraxas or a user is currently allowed to perform; and</li>
         <li>installation and current server-access information.</li>
       </ul>
-      <p>
-        Abraxas uses Discord identifiers as stable references where needed to operate
-        its features. We avoid storing additional copies of Discord profile information
-        when a stable identifier is sufficient.
-      </p>
+      <p>Abraxas uses Discord identifiers as stable references where needed to operate its features. We avoid storing additional copies of Discord profile information when a stable identifier is sufficient.</p>
 
       <h3>Applications</h3>
       <p>If you complete an Application through Abraxas, we may process:</p>
@@ -322,63 +313,28 @@
         <li>submission and review state; and</li>
         <li>other information necessary to complete the Application configured by that Discord server.</li>
       </ul>
-      <p>
-        Server administrators may configure the questions and choices shown in an Application.
-      </p>
-      <p>
-        Application information may be delivered into a Discord channel configured by
-        the server for review. After delivery, that message is stored by Discord within
-        the applicable server. Abraxas does not retain a separate historical copy solely
-        to reproduce or manage that message after the associated Abraxas state is no longer needed.
-      </p>
+      <p>Server administrators may configure the questions and choices shown in an Application.</p>
+      <p>Application information may be delivered into a Discord channel configured by the server for review. After delivery, that message is stored by Discord within the applicable server. Abraxas does not retain a separate historical copy solely to reproduce or manage that message after the associated Abraxas state is no longer needed.</p>
 
       <h3>Custom Responses</h3>
-      <p>
-        If a server enables Custom Responses, Abraxas processes message content as
-        messages are received from Discord so it can determine whether a configured trigger matches.
-      </p>
-      <p>
-        Message content used for this matching process is transient and is not retained
-        by Abraxas as message history.
-      </p>
-      <p>
-        Abraxas does retain the Custom Response configuration created by server administrators,
-        including configured trigger text and response text, because that information is
-        required for the feature to operate.
-      </p>
+      <p>If a server enables Custom Responses, Abraxas processes message content as messages are received from Discord so it can determine whether a configured trigger matches.</p>
+      <p>Message content used for this matching process is transient and is not retained by Abraxas as message history.</p>
+      <p>Abraxas does retain the Custom Response configuration created by server administrators, including configured trigger text and response text, because that information is required for the feature to operate.</p>
 
       <h3>Lockdown</h3>
-      <p>
-        If a server enables Lockdown, Abraxas may retain the Discord role, channel,
-        category, Application, and permission information necessary to gate server access,
-        detect incomplete configuration, repair Lockdown, and later undo the changes made by Lockdown.
-      </p>
+      <p>If a server enables Lockdown, Abraxas may retain the Discord role, channel, category, Application, and permission information necessary to gate server access, detect incomplete configuration, repair Lockdown, and later undo the changes made by Lockdown.</p>
       <p>This information is retained only while Lockdown is active, being repaired, or being removed.</p>
 
       <h3>Operational Information</h3>
       <p>Abraxas collects limited operational information needed to keep the service reliable and secure.</p>
-      <p>
-        Operational telemetry may include information such as operation type, result,
-        duration, subsystem, and timestamps. Operational telemetry is designed not to
-        contain Discord IDs or message or Application content.
-      </p>
-      <p>
-        Short-lived application logs may contain internal correlation or execution
-        identifiers used to investigate failures. Ordinary application logs are not
-        intended to contain Discord IDs or Discord content and are retained for no more than 24 hours.
-      </p>
+      <p>Operational telemetry may include information such as operation type, result, duration, subsystem, and timestamps. Operational telemetry is designed not to contain Discord IDs or message or Application content.</p>
+      <p>Short-lived application logs may contain internal correlation or execution identifiers used to investigate failures. Ordinary application logs are not intended to contain Discord IDs or Discord content and are retained for no more than 24 hours.</p>
     </section>
 
     <section class="policy-section">
       <h2><span class="number">2.</span> How We Use Information</h2>
       <p>Abraxas uses information only as necessary to provide and operate its existing features.</p>
-      <p>
-        This includes operating Applications, determining current permissions and eligibility,
-        performing configured server-management actions, processing Custom Responses,
-        operating Lockdown, delivering requested notifications or work, detecting and repairing
-        incomplete operations, maintaining service reliability and security, responding to
-        privacy requests, and complying with applicable law.
-      </p>
+      <p>This includes operating Applications, determining current permissions and eligibility, performing configured server-management actions, processing Custom Responses, operating Lockdown, delivering requested notifications or work, detecting and repairing incomplete operations, maintaining service reliability and security, responding to privacy requests, and complying with applicable law.</p>
       <p>Abraxas does not use Discord API data to build advertising profiles, market to Discord users, or create unrelated behavioral datasets.</p>
       <p>Abraxas does not sell Discord API data.</p>
       <p>Abraxas does not disclose Discord API data to data brokers or advertising networks.</p>
@@ -390,44 +346,25 @@
 
       <h3>Discord</h3>
       <p>Abraxas communicates with Discord to provide its functionality.</p>
-      <p>
-        For example, Abraxas may send Application reports to configured Discord channels,
-        assign roles, update channel permissions, send responses, or otherwise perform
-        actions requested through enabled features.
-      </p>
+      <p>For example, Abraxas may send Application reports to configured Discord channels, assign roles, update channel permissions, send responses, or otherwise perform actions requested through enabled features.</p>
       <p>Information delivered into Discord is subject to Discord's own terms, privacy practices, and server permission system.</p>
 
       <h3>Discord Server Administrators and Reviewers</h3>
-      <p>
-        When you submit an Application, information you provide may be shown to the
-        administrators or delegated reviewers of the Discord server for which you are applying.
-      </p>
+      <p>When you submit an Application, information you provide may be shown to the administrators or delegated reviewers of the Discord server for which you are applying.</p>
       <p>The server determines who it authorizes to review Applications.</p>
 
       <h3>OVHcloud</h3>
-      <p>
-        Abraxas is hosted on infrastructure provided by <strong>OVHcloud</strong>.
-        Information processed or stored by Abraxas may therefore pass through or reside
-        on OVHcloud infrastructure as necessary to operate the service.
-      </p>
+      <p>Abraxas is hosted on infrastructure provided by <strong>OVHcloud</strong>. Information processed or stored by Abraxas may therefore pass through or reside on OVHcloud infrastructure as necessary to operate the service.</p>
       <p>Abraxas limits information stored on this infrastructure according to the retention practices described in this Privacy Policy.</p>
 
       <h3>Cloudflare</h3>
-      <p>
-        Abraxas uses <strong>Cloudflare</strong> for encrypted network transit and related network-security services.
-      </p>
-      <p>
-        Information transmitted between external clients and Abraxas infrastructure may
-        pass through Cloudflare as part of providing encrypted and protected connectivity.
-      </p>
+      <p>Abraxas uses <strong>Cloudflare</strong> for encrypted network transit and related network-security services.</p>
+      <p>Information transmitted between external clients and Abraxas infrastructure may pass through Cloudflare as part of providing encrypted and protected connectivity.</p>
       <p>Cloudflare is not used by Abraxas to build advertising profiles from Discord data.</p>
 
       <h3>Legal Requirements</h3>
       <p>We may disclose information if required by applicable law, legal process, or a valid governmental request.</p>
-      <p>
-        We may also process or preserve limited information when required by law, even where
-        our ordinary retention rules would otherwise require deletion.
-      </p>
+      <p>We may also process or preserve limited information when required by law, even where our ordinary retention rules would otherwise require deletion.</p>
     </section>
 
     <section class="policy-section">
@@ -436,80 +373,40 @@
 
       <h3>Applications</h3>
       <p>Application answers, progress, selections, and other submission payload are retained while they are needed to complete and review the Application.</p>
-      <p>
-        Once an Application reaches a terminal state, Abraxas deletes the submission payload
-        when it is no longer required to operate the Application lifecycle. Abraxas may temporarily
-        retain the minimum decision state necessary to show the user's current status or enforce
-        the server's current reapplication rules.
-      </p>
-      <p>
-        If you leave a Discord server, Abraxas deletes the Applications state associated with
-        you in that server, including unfinished Applications, pending review state, settled
-        member state, and related enrollment or eligibility state.
-      </p>
+      <p>Once an Application reaches a terminal state, Abraxas deletes the submission payload when it is no longer required to operate the Application lifecycle. Abraxas may temporarily retain the minimum decision state necessary to show the user's current status or enforce the server's current reapplication rules.</p>
+      <p>If you leave a Discord server, Abraxas deletes the Applications state associated with you in that server, including unfinished Applications, pending review state, settled member state, and related enrollment or eligibility state.</p>
       <p>If you later rejoin that server, Abraxas treats you as a new member from the perspective of Applications.</p>
       <p>Application configuration revisions are retained only while an in-progress Application still depends on that exact revision. Unreferenced revisions are deleted.</p>
 
       <h3>Server Configuration</h3>
-      <p>
-        Application, Custom Responses, Lockdown, and other guild-specific product configuration
-        is retained while Abraxas remains installed in the server and that information is needed
-        to operate the configured feature.
-      </p>
+      <p>Application, Custom Responses, Lockdown, and other guild-specific product configuration is retained while Abraxas remains installed in the server and that information is needed to operate the configured feature.</p>
       <p>When Abraxas is confirmed to have left a server, guild-owned product data is deleted.</p>
-      <p>
-        A Discord server ID may be retained after removal if the server has been blocked from
-        using Abraxas. This limited information may be retained for as long as necessary to continue enforcing the block.
-      </p>
+      <p>A Discord server ID may be retained after removal if the server has been blocked from using Abraxas. This limited information may be retained for as long as necessary to continue enforcing the block.</p>
 
       <h3>Queued and Temporary Processing</h3>
       <p>Information temporarily placed into internal queues or event-processing systems exists only while needed to deliver or process work.</p>
       <p>Completed or terminally failed jobs are deleted rather than retained as job history.</p>
       <p>Durable event-delivery data is retained for no more than one hour.</p>
-      <p>
-        Future scheduled work is retained only while that future work remains pending.
-        Completed, cancelled, or terminally skipped schedules are not retained as execution history.
-      </p>
+      <p>Future scheduled work is retained only while that future work remains pending. Completed, cancelled, or terminally skipped schedules are not retained as execution history.</p>
 
       <h3>Logs and Diagnostics</h3>
       <p>Ordinary application logs are retained for no more than 24 hours.</p>
       <p>Abraxas does not retain application-process core dumps.</p>
-      <p>
-        Operational metrics may be retained for service operation and capacity planning,
-        but are designed not to include Discord IDs or Discord message or Application content.
-      </p>
+      <p>Operational metrics may be retained for service operation and capacity planning, but are designed not to include Discord IDs or Discord message or Application content.</p>
     </section>
 
     <section class="policy-section">
       <h2><span class="number">5.</span> Data We Do Not Intentionally Collect or Retain</h2>
-      <p>
-        Abraxas does not intentionally collect Discord passwords, authentication tokens,
-        financial account credentials, government identification numbers, or similar credentials
-        through its normal product functionality.
-      </p>
+      <p>Abraxas does not intentionally collect Discord passwords, authentication tokens, financial account credentials, government identification numbers, or similar credentials through its normal product functionality.</p>
       <p>Abraxas does not maintain copies of Discord member lists, Discord audit logs, or Discord message history merely for archival purposes.</p>
-      <p>
-        We do not maintain durable user-behavior or engagement histories unless a future
-        feature genuinely requires such information and this Privacy Policy is updated before that collection begins.
-      </p>
+      <p>We do not maintain durable user-behavior or engagement histories unless a future feature genuinely requires such information and this Privacy Policy is updated before that collection begins.</p>
     </section>
 
     <section class="policy-section">
       <h2><span class="number">6.</span> Security</h2>
-      <p>
-        Abraxas uses administrative and technical safeguards intended to protect information
-        against unauthorized access, loss, alteration, disclosure, or destruction.
-      </p>
-      <p>
-        These safeguards include encryption in transit, encryption of stored application
-        data at rest, access controls, data minimization, short-lived diagnostic logging,
-        and removal of information when its operational purpose ends.
-      </p>
-      <p>
-        No system can guarantee absolute security. If we discover a security incident involving
-        personal information, we will investigate, remediate it, and provide notifications where
-        required by applicable law or Discord's requirements.
-      </p>
+      <p>Abraxas uses administrative and technical safeguards intended to protect information against unauthorized access, loss, alteration, disclosure, or destruction.</p>
+      <p>These safeguards include encryption in transit, encryption of stored application data at rest, access controls, data minimization, short-lived diagnostic logging, and removal of information when its operational purpose ends.</p>
+      <p>No system can guarantee absolute security. If we discover a security incident involving personal information, we will investigate, remediate it, and provide notifications where required by applicable law or Discord's requirements.</p>
     </section>
 
     <section class="policy-section">
@@ -519,23 +416,10 @@
         <p><strong>Privacy contact</strong></p>
         <p><a href="mailto:privacy@abraxas.bot">privacy@abraxas.bot</a></p>
       </div>
-      <p>
-        Please identify the Discord account associated with your request. We may need to verify
-        that you control that account before disclosing, modifying, or deleting information associated with it.
-      </p>
-      <p>
-        When a valid deletion request applies, Abraxas will delete personal information that it
-        still holds unless retention is required by law or remains necessary for an applicable ongoing operational or security purpose.
-      </p>
-      <p>
-        Deleting information held by Abraxas does not itself delete independent content stored
-        within Discord, such as messages previously posted into a server.
-      </p>
-      <p>
-        Depending on where you live, applicable privacy law may also provide rights such as data
-        portability, restriction of processing, objection to certain processing, or the right
-        to complain to a data-protection authority.
-      </p>
+      <p>Please identify the Discord account associated with your request. We may need to verify that you control that account before disclosing, modifying, or deleting information associated with it.</p>
+      <p>When a valid deletion request applies, Abraxas will delete personal information that it still holds unless retention is required by law or remains necessary for an applicable ongoing operational or security purpose.</p>
+      <p>Deleting information held by Abraxas does not itself delete independent content stored within Discord, such as messages previously posted into a server.</p>
+      <p>Depending on where you live, applicable privacy law may also provide rights such as data portability, restriction of processing, objection to certain processing, or the right to complain to a data-protection authority.</p>
       <p>We will honor applicable privacy rights as required by law.</p>
     </section>
 
@@ -543,39 +427,25 @@
       <h2><span class="number">8.</span> Information About Children</h2>
       <p>Abraxas is not directed to anyone below the minimum age permitted to use Discord in their jurisdiction.</p>
       <p>We do not knowingly design Abraxas to collect information from individuals who are not permitted to use Discord.</p>
-      <p>
-        If you believe Abraxas has received information relating to someone who is not
-        permitted to use Discord because of their age, contact
-        <a href="mailto:privacy@abraxas.bot">privacy@abraxas.bot</a>.
-      </p>
+      <p>If you believe Abraxas has received information relating to someone who is not permitted to use Discord because of their age, contact <a href="mailto:privacy@abraxas.bot">privacy@abraxas.bot</a>.</p>
     </section>
 
     <section class="policy-section">
       <h2><span class="number">9.</span> International Processing</h2>
       <p>Discord and the infrastructure used to operate Abraxas may process information in countries other than the country where you live.</p>
-      <p>
-        Where applicable law requires safeguards for international transfers of personal
-        information, we will use legally recognized transfer mechanisms or other required protections.
-      </p>
+      <p>Where applicable law requires safeguards for international transfers of personal information, we will use legally recognized transfer mechanisms or other required protections.</p>
     </section>
 
     <section class="policy-section">
       <h2><span class="number">10.</span> Changes to This Policy</h2>
       <p>Abraxas may change this Privacy Policy as the service changes.</p>
-      <p>
-        If a change materially affects what personal information Abraxas collects, how that
-        information is used or shared, or how long it is retained, the policy will be updated
-        before the new practice becomes part of the service.
-      </p>
+      <p>If a change materially affects what personal information Abraxas collects, how that information is used or shared, or how long it is retained, the policy will be updated before the new practice becomes part of the service.</p>
       <p>The effective date at the top of this policy identifies the current version.</p>
     </section>
 
     <section class="policy-section">
       <h2><span class="number">11.</span> Contact</h2>
-      <p>
-        For privacy questions, requests to access or correct information, deletion requests,
-        or other questions about how Abraxas handles information, contact:
-      </p>
+      <p>For privacy questions, requests to access or correct information, deletion requests, or other questions about how Abraxas handles information, contact:</p>
       <div class="contact-card">
         <p><strong>Abraxas Privacy</strong></p>
         <p><a href="mailto:privacy@abraxas.bot">privacy@abraxas.bot</a></p>

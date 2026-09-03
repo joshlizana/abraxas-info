@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Abraxas legal information and policies.">
+  <meta name="description" content="Information and policies for the Abraxas Discord application.">
   <meta name="theme-color" content="#24123d">
   <title>Abraxas</title>
 
@@ -51,24 +51,16 @@
       text-align: center;
     }
 
-    .brand-mark {
-      width: 64px;
-      height: 64px;
-      margin: 0 auto 1.25rem;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      color: #150d20;
-      background: linear-gradient(145deg, var(--gold-bright), var(--gold));
-      box-shadow:
-        0 0 0 4px rgba(111, 66, 193, 0.28),
-        0 12px 30px rgba(214, 170, 61, 0.18);
-      font-size: 1.4rem;
-      font-weight: 950;
+    .logo {
+      width: min(320px, 62vw);
+      height: auto;
+      display: block;
+      margin: 0 auto 1.5rem;
+      filter: drop-shadow(0 10px 30px rgba(214, 170, 61, 0.18));
     }
 
     .eyebrow {
-      margin: 0 0 0.7rem;
+      margin: 0 0 0.8rem;
       color: var(--gold-bright);
       font-size: 0.78rem;
       font-weight: 850;
@@ -76,16 +68,9 @@
       text-transform: uppercase;
     }
 
-    h1 {
-      margin: 0;
-      font-size: clamp(2.6rem, 8vw, 5rem);
-      line-height: 1;
-      letter-spacing: -0.045em;
-    }
-
     .lede {
       max-width: 560px;
-      margin: 1.25rem auto 2rem;
+      margin: 0 auto 2rem;
       color: var(--muted);
       font-size: 1.05rem;
       line-height: 1.7;
@@ -147,11 +132,10 @@
 
 <body>
   <main>
-    <div class="brand-mark" aria-hidden="true">A</div>
+    <img class="logo" src="abraxas-logo.png" alt="Abraxas logo">
     <p class="eyebrow">Abraxas</p>
-    <h1>Legal</h1>
     <p class="lede">
-      Policies and information for the Abraxas Discord application.
+      Information and policies for the Abraxas Discord application.
     </p>
 
     <nav class="links" aria-label="Legal documents">
