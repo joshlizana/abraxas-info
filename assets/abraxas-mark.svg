@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Abraxas mark</title>
+  <desc id="desc">A solid angular capital A in deep blue and teal with restrained tactical cuts.</desc>
+  <defs>
+    <linearGradient id="body" x1="80" y1="440" x2="430" y2="70" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0d1b29"/>
+      <stop offset="0.48" stop-color="#1d4960"/>
+      <stop offset="1" stop-color="#4fd1c5"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="120" y1="420" x2="390" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2f7f8b"/>
+      <stop offset="1" stop-color="#7cede3"/>
+    </linearGradient>
+    <mask id="cuts">
+      <rect width="512" height="512" fill="white"/>
+      <path d="M256 176 L211 292 H301 Z" fill="black"/>
+      <path d="M315 207 L405 170" stroke="black" stroke-width="12" stroke-linecap="round"/>
+      <path d="M329 252 L421 214" stroke="black" stroke-width="10" stroke-linecap="round"/>
+      <path d="M344 298 L435 261" stroke="black" stroke-width="8" stroke-linecap="round"/>
+    </mask>
+  </defs>
+  <path
+    d="M256 36 L474 476 H366 L326 386 H186 L146 476 H38 Z"
+    fill="url(#body)"
+    stroke="url(#edge)"
+    stroke-width="6"
+    stroke-linejoin="round"
+    mask="url(#cuts)"
+  />
+  <path
+    d="M174 335 H338"
+    stroke="#7cede3"
+    stroke-opacity="0.42"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+</svg>
