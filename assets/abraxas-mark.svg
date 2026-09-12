@@ -1,37 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" role="img" aria-labelledby="title desc">
   <title id="title">Abraxas mark</title>
-  <desc id="desc">A solid angular capital A in deep blue and teal with restrained tactical cuts.</desc>
+  <desc id="desc">Angular dark blue A mark with bright teal edge highlights.</desc>
   <defs>
-    <linearGradient id="body" x1="80" y1="440" x2="430" y2="70" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0d1b29"/>
-      <stop offset="0.48" stop-color="#1d4960"/>
-      <stop offset="1" stop-color="#4fd1c5"/>
+    <linearGradient id="face" x1="300" y1="1040" x2="760" y2="170" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#063556"/>
+      <stop offset="0.48" stop-color="#074b70"/>
+      <stop offset="0.78" stop-color="#0a6385"/>
+      <stop offset="1" stop-color="#0b7894"/>
     </linearGradient>
-    <linearGradient id="edge" x1="120" y1="420" x2="390" y2="100" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#2f7f8b"/>
-      <stop offset="1" stop-color="#7cede3"/>
+    <linearGradient id="edge" x1="180" y1="1040" x2="830" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0a83bb"/>
+      <stop offset="0.48" stop-color="#15dff0"/>
+      <stop offset="1" stop-color="#28f6ff"/>
     </linearGradient>
-    <mask id="cuts">
-      <rect width="512" height="512" fill="white"/>
-      <path d="M256 176 L211 292 H301 Z" fill="black"/>
-      <path d="M315 207 L405 170" stroke="black" stroke-width="12" stroke-linecap="round"/>
-      <path d="M329 252 L421 214" stroke="black" stroke-width="10" stroke-linecap="round"/>
-      <path d="M344 298 L435 261" stroke="black" stroke-width="8" stroke-linecap="round"/>
-    </mask>
+    <linearGradient id="rightFace" x1="960" y1="1040" x2="710" y2="380" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#063557"/>
+      <stop offset="0.62" stop-color="#075377"/>
+      <stop offset="1" stop-color="#0b6f8d"/>
+    </linearGradient>
+    <filter id="glow" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feFlood flood-color="#00e9ff" flood-opacity="0.72" result="color"/>
+      <feComposite in="color" in2="blur" operator="in" result="soft"/>
+      <feMerge>
+        <feMergeNode in="soft"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
   </defs>
-  <path
-    d="M256 36 L474 476 H366 L326 386 H186 L146 476 H38 Z"
-    fill="url(#body)"
-    stroke="url(#edge)"
-    stroke-width="6"
-    stroke-linejoin="round"
-    mask="url(#cuts)"
-  />
-  <path
-    d="M174 335 H338"
-    stroke="#7cede3"
-    stroke-opacity="0.42"
-    stroke-width="5"
-    stroke-linecap="round"
-  />
+
+  <!-- restrained cyan aura from the supplied raster mark -->
+  <g fill="none" stroke="#00dcff" stroke-width="26" stroke-linejoin="miter" opacity="0.26" filter="url(#softGlow)">
+    <path d="M625 145 L751 355 L300 1044 L52 1044 Z"/>
+    <path d="M761 376 L1172 1044 L913 1044 L629 584 Z"/>
+  </g>
+
+  <!-- dark outer bevel -->
+  <g stroke="#032f4d" stroke-width="28" stroke-linejoin="miter">
+    <path d="M625 145 L751 355 L300 1044 L52 1044 Z" fill="url(#face)"/>
+    <path d="M761 376 L1172 1044 L913 1044 L629 584 Z" fill="url(#rightFace)"/>
+  </g>
+
+  <!-- luminous teal edge -->
+  <g stroke="url(#edge)" stroke-width="11" stroke-linejoin="miter" filter="url(#glow)">
+    <path d="M625 145 L751 355 L300 1044 L52 1044 Z" fill="url(#face)"/>
+    <path d="M761 376 L1172 1044 L913 1044 L629 584 Z" fill="url(#rightFace)"/>
+  </g>
+
+  <!-- crisp inner bevel line -->
+  <g fill="none" stroke="#58f4ff" stroke-width="3.5" stroke-linejoin="miter" opacity="0.8">
+    <path d="M625 168 L727 355 L286 1018 L77 1018 Z"/>
+    <path d="M763 403 L1143 1018 L929 1018 L652 585 Z"/>
+  </g>
+
+  <!-- subtle directional sheen -->
+  <path d="M606 195 L699 351 L285 980" fill="none" stroke="#8effff" stroke-width="8" stroke-linecap="round" opacity="0.28"/>
+  <path d="M775 423 L1128 992" fill="none" stroke="#67f7ff" stroke-width="7" stroke-linecap="round" opacity="0.22"/>
 </svg>
